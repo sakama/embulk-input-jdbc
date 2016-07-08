@@ -19,6 +19,9 @@ public class PostgreSQLColumnGetterFactory extends ColumnGetterFactory
     {
         if (column.getTypeName().equals("hstore")) {
             return new HstoreColumnGetter(to, getToType(option));
+        } else if (column.getTypeName().startsWith("_")) {
+            // Array types have "_" prefix like "_text"
+            return new ArrayColumnGetter(to, getToType(option), column.getTypeName());
         } else {
             return super.newColumnGetter(column, option);
         }

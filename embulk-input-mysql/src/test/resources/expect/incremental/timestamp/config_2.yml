@@ -1,0 +1,4 @@
+table: timestamp_load
+last_record: ['2016-11-02T02:00:05.333003Z']
+incremental: true
+incremental_columns: [time]

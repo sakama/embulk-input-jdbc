@@ -1,0 +1,4 @@
+table: timestamp_load
+default_time_zone: +0300
+incremental: true
+incremental_columns: [time]

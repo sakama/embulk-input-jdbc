@@ -10,6 +10,7 @@ env:
   global:
     # For Gradle
     - EMBULK_INPUT_POSTGRESQL_TEST_CONFIG=`pwd`/ci/travis_postgresql.yml
+    - EMBULK_INPUT_MYSQL_TEST_CONFIG=`pwd`/ci/travis_mysql.yml
     # PostgreSQL
     - PG_VERSION=9.5
     - PG_DATABASE=travis_ci_test
